@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+<mat-toolbar-row>
+  <span>My First App</span>
+      <span class="example-fill-remaining-space"></span>
+      <!-- <span class="align-center"></span> -->
+      <!-- <span class="example-spacer"></span> -->
+      <button mat-button>Home</button>
+      <button mat-button>About</button>
+      <button mat-button>Contact</button>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" xPosition="after" Enter>
+    <button mat-menu-item>Ilkansfjkn</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+   </mat-toolbar-row>
+   </mat-toolbar>

@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+
+table{
+  height:100%;
+  width:100%;
+}
+td,th{
+  border:1px solid black;
+}

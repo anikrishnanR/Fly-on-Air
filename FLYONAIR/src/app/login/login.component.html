@@ -1,0 +1,57 @@
+
+   <div fxLayout="row" fxLayoutAlign="center" class="login-main" apperance="outline">
+
+
+      <mat-card align="center">
+
+
+      <mat-card-header >
+
+
+         <mat-card-title text-align="center" >Login Page</mat-card-title>
+
+
+      </mat-card-header>
+
+
+      <mat-card-content fxLayout="column">
+
+
+         <mat-form-field appearance="outline">
+
+
+           <input matInput placeholder="name"[formControl]="name" required>
+           <mat-error *ngIf="name.invalid">{{getErrorMessage(name)}}</mat-error>
+
+         </mat-form-field><br>
+
+
+         <mat-form-field appearance="outline">
+
+
+           <input type="password" matInput placeholder="password"[formControl]="pass" required>
+           <mat-error *ngIf="pass.invalid">{{getErrorMessage(pass)}}</mat-error>
+
+
+         </mat-form-field>
+
+
+      </mat-card-content>
+
+
+      <mat-card-actions align="center">
+
+
+         <button appearance="outline" mat-raised-button color="primary" (click)="validate();">Login</button>
+
+
+
+      <p>If you are new user<a mat-button routerLink="/register">Register Here</a></p>
+    </mat-card-actions>
+
+
+
+      </mat-card>
+
+
+      </div>
