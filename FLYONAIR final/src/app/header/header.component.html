@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+<mat-toolbar-row>
+  <span> <mat-icon style="font-weight: 400;">flight_land</mat-icon>My First App</span>
+      <span class="example-fill-remaining-space"></span>
+      <!-- <span class="align-center"></span> -->
+      <!-- <span class="example-spacer"></span> -->
+      <button mat-button (click)="callhm()"><mat-icon>home</mat-icon> Home</button>
+      <button mat-button (click)="callab()">About</button>
+      <button mat-button (click)="callcon()"><mat-icon> contacts</mat-icon>Contact</button>
+      <button mat-button (click)="calllog()"><mat-icon>person</mat-icon>Login</button>
+      <button mat-button (click)="callsign()"><mat-icon>person_add</mat-icon>Signup</button>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" xPosition="after" Enter>
+    <button mat-menu-item (click)="callinst()">Booking instruction </button>
+    <button mat-menu-item>Dummy</button>
+  </mat-menu>
+   </mat-toolbar-row>
+   </mat-toolbar>

@@ -1,0 +1,51 @@
+<mat-card class="example-card" align="center">
+  <mat-form-field appearance="outline" >
+<mat-label>From:</mat-label>
+    <input [(ngModel)]="from"class="toolbar-search"matInput placeholder="From:">
+     </mat-form-field>
+  <mat-icon (click)="swap();">repeat</mat-icon>
+  <mat-form-field appearance="outline">
+      <mat-label>To:</mat-label>
+    <input [(ngModel)]="to" matInput  placeholder="To:">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+      <mat-label>Depature:</mat-label>
+      <input [(ngModel)]="date" matInput [matDatepicker]="picker1" placeholder="Depature">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+
+      <mat-form-field appearance="outline">
+          <mat-select placeholder="Select">
+              <mat-select-trigger>
+
+                  <span  class="example-additional-selection">{{count}}Travaler
+
+                  </span></mat-select-trigger >
+              <mat-option value="option">Adult   <mat-label><mat-icon align="right" (click)="Increment()">add</mat-icon>{{count}}
+                <mat-icon (click)="Decrement()">remove</mat-icon></mat-label></mat-option>
+            <mat-option value="option">Business<mat-label><mat-icon align="right" (click)="Increment()">add</mat-icon>{{count}}
+              <mat-icon (click)="Decrement()">remove</mat-icon></mat-label></mat-option>
+
+            <mat-option value="option">Ecnomey<mat-label><mat-icon align="right" (click)="Increment()">add</mat-icon>{{count}}
+              <mat-icon (click)="Decrement()">remove</mat-icon></mat-label></mat-option>
+          </mat-select>
+        </mat-form-field >
+      <mat-form-field appearance="outline">
+          <mat-select placeholder="Class">
+            <mat-select-trigger>
+
+              <span  class="example-additional-selection"> name
+
+              </span>
+            </mat-select-trigger >
+            <mat-option name="class"  value="class">First class</mat-option>
+            <mat-option  name="class" value="class">Business</mat-option>
+            <mat-option  name="class" value="class">Economy</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button id="button" appearance="outline" mat-raised-button color="primary" (click)="getfilterdata()"><mat-icon>search</mat-icon>Search</button>
+        </mat-card>
+
+

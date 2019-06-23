@@ -1,0 +1,160 @@
+<!-- <section id="contact2" class="contact2">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12 text-center">
+
+        <h2>Contact With Us</h2>
+
+        <p class="big-para">Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau
+          typesetting.</p>
+
+        <div class="contact-social-link">
+
+          <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i
+              class="fa fa-facebook fa-2x social-icon"></i></a>
+
+          <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i
+              class="fa fa-twitter fa-2x social-icon"></i></a>
+
+          <a href="#" data-toggle="tooltip" data-placement="top" title="Tumblr"><i
+              class="fa fa-tumblr fa-2x social-icon"></i></a>
+
+          <a href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i
+              class="fa fa-linkedin fa-2x social-icon"></i></a>
+
+          <a href="#" data-toggle="tooltip" data-placement="top" title="Google - Plus"><i
+              class="fa fa-google-plus fa-2x social-icon"></i></a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12 ">
+
+        <div class="contact-form">
+
+          <form class="clearfix" accept-charset="utf-8" method="get" action="#">
+
+            <div class="row">
+
+              <div class="col-sm-6 form-group wow fadeInDown" data-wow-delay="700ms" data-wow-duration="1000ms">
+
+                <label class="sr-only" for="name">Your Name</label>
+
+                <input type="text" placeholder="Your Name" name="name" class="form-control input-lg" required="">
+
+              </div>
+
+              <div class="col-sm-6 form-group wow fadeInDown" data-wow-delay="700ms" data-wow-duration="1000ms">
+
+                <label class="sr-only" for="email">Email Address</label>
+
+                <input type="email" placeholder="Your Email" name="email" class="form-control input-lg" required="">
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-sm-12 form-group wow fadeInDown" data-wow-delay="900ms" data-wow-duration="1000ms">
+
+                <label class="sr-only">Phone Number</label>
+
+                <input type="tel" placeholder="Phone Number" name="tel" class="form-control input-lg">
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-sm-12 form-group wow fadeInDown" data-wow-delay="1000ms" data-wow-duration="1000ms">
+
+                <label class="sr-only" for="message">Write Message</label>
+
+                <textarea rows="6" name="message" id="message" class="form-control input-lg "
+                  placeholder="Write Massage" required=""></textarea>
+
+              </div>
+
+            </div>
+
+            <button class="btn btn-success btn-lg btn-block wow fadeInDown" data-wow-delay="1200ms"
+              data-wow-duration="1000ms" type="submit">Send Message</button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section> -->
+
+<h1>Message Us</h1>
+<div class="contactform">
+  <div class="contact">
+      <h2>Get in Touch with Us</h2>
+      <ul>
+        <li><img src="..\assets\img\ph.PNG">
+        <p>+91 95769 35460</p>
+        </li>
+        <li><img src="..\assets\img\ph.PNG">
+        <p>+91 97709 09345</p>
+        </li>
+        <li><img src="..\assets\img\mail.PNG">
+        <p>contact@eflight.in</p>
+        </li>
+      </ul>
+  </div>
+  <div class="form">
+    <form [formGroup]="msgFormGroup" (ngSubmit)="onSubmit()">
+
+      <label>
+        Name*:
+        <input type="text" formControlName="name">
+        <div *ngIf="submitted && msgFormGroup.controls['name'].errors" class="error">
+            <div *ngIf="msgFormGroup.controls['name'].errors.required">Your name is required</div>
+        </div>
+      </label>
+      <label>
+        Phone Number*:
+        <input type="tel" formControlName="phno">
+        <div *ngIf="submitted && msgFormGroup.controls['phno'].errors" class="error">
+            <div *ngIf="msgFormGroup.controls['phno'].errors.required">Your contact number is required</div>
+            <div *ngIf="msgFormGroup.controls['phno'].errors.pattern">Phone number must be a valid contact number</div>
+        </div>
+      </label>
+      <label>
+        Email*:
+        <input type="email" formControlName="email">
+        <div *ngIf="submitted && msgFormGroup.controls['email'].errors" class="error">
+            <div *ngIf="msgFormGroup.controls['email'].errors.required">Your Email address is required</div>
+            <div *ngIf="msgFormGroup.controls['email'].errors.email">Email must be a valid email address</div>
+        </div>
+      </label>
+      <label>
+        Message/Enquiry*:
+        <textarea formControlName="msg"></textarea>
+        <div *ngIf="submitted && msgFormGroup.controls['msg'].errors" class="error">
+            <div *ngIf=" msgFormGroup.controls['msg'].errors.required">Message/Enquiry details is required</div>
+        </div>
+      </label>
+
+      <input type="submit" value="Send" class="sbt">
+      <h5 *ngIf="success">Your enquiry is submitted successfully!! We will contact you or resolve your issue shortly.</h5>
+
+    </form>
+  </div>
+</div>

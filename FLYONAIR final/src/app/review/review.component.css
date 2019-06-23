@@ -1,0 +1,28 @@
+.mat-card
+{
+
+  display:inline-flex;
+  margin:10px;
+
+
+}
+table {
+
+
+  border:2px solid black;
+  border-radius: 15px;
+
+  background-color: rgb(196, 248, 255);
+
+}
+tr{
+  display: block;
+
+  margin: 10px;
+}
+td
+{
+  display:inline-flex;
+margin:10px;
+text-align:center;
+}

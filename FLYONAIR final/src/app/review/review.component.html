@@ -1,0 +1,17 @@
+<mat-card-title>Flight Details</mat-card-title>
+<mat-card class="example-card">
+  
+  <div>
+    <table matTable >
+      <tr>
+        <td><mat-icon aria-setsize="45" color="primary">airplanemode_active</mat-icon>From:<br>{{data.name}}</td>
+        <td><mat-icon>query_builder</mat-icon>Departure Time<br>{{data.departureTime}}</td>
+        <td><mat-icon>query_builder</mat-icon>Arrival Time<br>{{data.arrivalTime}}</td>
+        <td><mat-icon>query_builder</mat-icon>Duration:<br>{{data.duration}}</td>
+        <td><mat-icon>room</mat-icon>Destination:<br>{{data.destination}}</td>
+        <td>Price<br>₹{{data.price}}</td>
+      </tr>
+    </table>
+  </div>
+  </mat-card>
+  
